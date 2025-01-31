@@ -24,6 +24,7 @@ const register=async(req,resp)=>{
 
 const login=async(req,resp)=>{
     const email=req.body.email;
+    console.log(email);
     try{ 
      const user=await User.findOne({email});
      if(!user){
